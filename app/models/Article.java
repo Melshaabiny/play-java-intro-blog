@@ -9,9 +9,11 @@ import javax.persistence.Id;
 @Entity
 public class Article extends Model{
     @Id // Primary key
-    public String id;
+    public Long id;
     public String title;
     public String body;
+
+    public static Finder<Long, Article> find = new Finder<Long, Article>(Article.class);
 
 
 }

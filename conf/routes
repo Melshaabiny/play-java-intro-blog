@@ -4,6 +4,14 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-POST    /article                    controllers.Application.addArticle()
+
+# Mapping of routes using separate Blog controller to manage the Action methods of
+# my application's blogging feature.
+GET     /blogs                      controllers.Blog.index()
+GET     /blogs/new                  controllers.Blog.form()
+POST    /blogs                      controllers.Blog.create()
+GET     /blogs/:id                  controllers.Blog.show(id: Long)
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

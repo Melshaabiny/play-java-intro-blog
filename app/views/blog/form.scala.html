@@ -1,0 +1,13 @@
+@blog.main("Welcome to Moustafa's blog"){
+    <h2>New Blog Entry</h2>
+
+    <form action="@routes.Blog.create()" method="POST">
+        <label for="title">Title: </label>
+        <input type="text" name="title"/><br>
+        <label for="body">Body: </label>
+        <textarea name="body" id="body" cols="40" rows="15"></textarea><br>
+        <button>Submit</button><br>
+    </form>
+
+
+}

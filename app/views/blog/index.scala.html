@@ -1,0 +1,12 @@
+@(articles: List[Article])
+
+@blog.main("Welcome to Moustafa's Blog"){
+
+    <h2>Blog entries directory</h2>
+    <ul>
+        @for(article <- articles) {
+            <li><a href="@(routes.Blog.show(article.id))">@article.title</a></li>
+        }
+    </ul>
+
+}
